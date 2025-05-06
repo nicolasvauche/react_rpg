@@ -1,0 +1,169 @@
+.enemy-card {
+    overflow: hidden;
+    background: linear-gradient(145deg, #2a2a3a 0%, #1a1a2a 100%);
+    border: 3px solid #ffd700;
+    border-radius: 15px;
+    padding: 1rem;
+    color: white;
+    text-align: center;
+    min-width: 200px;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: linear-gradient(45deg, transparent, rgba(255, 215, 0, 0.1), transparent);
+        transform: rotate(45deg);
+        transition: 0.6s;
+        opacity: 0;
+    }
+
+    &:hover {
+        box-shadow: 0 0 30px rgba(255, 215, 0, 0.4);
+
+        &::before {
+            opacity: 1;
+            animation: shine 1.5s infinite;
+        }
+    }
+
+    img {
+        display: block;
+        max-height: 23dvh;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        border: 0.25rem solid #ffd700;
+        border-radius: 50%;
+        box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+        transform: scale(0.85);
+        margin: 0 auto 1rem;
+    }
+
+    h3 {
+        font-family: "MedievalSharp", cursive;
+        color: #ffd700;
+        font-size: 1.6rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        margin-bottom: 1rem;
+    }
+
+    .enemy-stats {
+        background: rgba(0, 0, 0, 0.4);
+        border: 1px solid rgba(255, 215, 0, 0.3);
+        border-radius: 10px;
+        padding: 0.5rem 1rem;
+        margin-bottom: 1rem;
+        backdrop-filter: blur(5px);
+
+        .stat-line {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 0.5rem;
+
+            .icon svg {
+                font-size: 1.5rem;
+            }
+
+            .stat-bar {
+                flex: 1;
+                background-color: #222;
+                height: 12px;
+                border-radius: 6px;
+                position: relative;
+                overflow: hidden;
+
+                .fill {
+                    height: 100%;
+                    transition: width 0.3s ease-in-out;
+                }
+
+                .label {
+                    position: absolute;
+                    top: -20px;
+                    right: 0;
+                    font-size: 0.8rem;
+                    color: #ccc;
+                }
+            }
+        }
+    }
+
+    .enemy-actions {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 1rem;
+
+        button {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            font-family: "MedievalSharp", cursive;
+            font-size: 1.25rem;
+            color: #ffd700;
+            background: linear-gradient(145deg, #2a2a3a 0%, #1a1a2a 100%);
+            border: 2px solid #ffd700;
+            border-radius: 10px;
+            text-decoration: none;
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
+            transition: all 0.3s ease;
+
+            &:hover {
+                background: #1a1a1a;
+                transform: translateY(-3px) scale(1.03);
+                box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+            }
+
+            &:disabled {
+                opacity: 0.4;
+                cursor: not-allowed;
+                transform: none !important;
+                box-shadow: none;
+            }
+
+            .icon {
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    &.dead {
+        opacity: 0.4;
+        pointer-events: none;
+        filter: grayscale(1);
+
+        &::after {
+            content: "☠️ Mort";
+            position: absolute;
+            top: 0.5rem;
+            right: 0.75rem;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #ffd700;
+            font-family: "MedievalSharp", cursive;
+            font-size: 0.9rem;
+            padding: 0.25rem 0.5rem;
+            border: 1px solid #ffd700;
+            border-radius: 6px;
+            box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+        }
+
+        &:hover {
+            transform: none;
+            box-shadow: none;
+
+            &::before {
+                opacity: 0;
+                animation: none;
+            }
+        }
+    }
+}

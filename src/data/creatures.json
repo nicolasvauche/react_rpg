@@ -1,0 +1,41 @@
+[
+  {
+    "name": "Rat Géant",
+    "picture": "rat-geant.png",
+    "health": 50,
+    "mana": 0,
+    "damage": 15,
+    "defense": 10
+  },
+  {
+    "name": "Gobelin lourd",
+    "picture": "gobelin-lourd.png",
+    "health": 75,
+    "mana": 0,
+    "damage": 20,
+    "defense": 15
+  },
+  {
+    "name": "Minotaure",
+    "picture": "minotaure.png",
+    "health": 120,
+    "mana": 0,
+    "damage": 30,
+    "defense": 20
+  },
+  {
+    "name": "Dragon Vert",
+    "picture": "dragon-vert.png",
+    "health": 150,
+    "mana": 200,
+    "damage": 40,
+    "defense": 30,
+    "spell": {
+      "name": "Souffle Acide",
+      "effect": "damage",
+      "target": "enemy",
+      "amount": 40,
+      "manaCost": 25
+    }
+  }
+]

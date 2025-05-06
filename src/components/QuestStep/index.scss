@@ -1,0 +1,58 @@
+.quest-card {
+    overflow: hidden;
+    padding: 1rem;
+    margin: 2rem 2rem 0;
+    background: linear-gradient(145deg, #2a2a3a 0%, #1a1a2a 100%);
+    border: 3px solid #ffd700;
+    border-radius: 15px;
+    position: relative;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
+    transition: all 0.4s ease;
+
+    @media (max-width: 767px) {
+        margin: 2rem 1rem 0;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: linear-gradient(45deg, transparent, rgba(255, 215, 0, 0.1), transparent);
+        transform: rotate(45deg);
+        transition: 0.6s;
+        opacity: 0;
+    }
+
+    &:hover {
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: 0 0 30px rgba(255, 215, 0, 0.4);
+
+        &::before {
+            opacity: 1;
+            animation: shine 1.5s infinite;
+        }
+    }
+
+    h3 {
+        color: #ffd700;
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+        font-family: "MedievalSharp", cursive;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    p {
+        color: #fff;
+        font-size: 1.2rem;
+        line-height: 1.6;
+        margin: 0.5rem 0;
+
+        strong {
+            display: block;
+            color: #ffd700;
+        }
+    }
+}

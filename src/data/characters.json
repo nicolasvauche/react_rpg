@@ -1,0 +1,76 @@
+[
+  {
+    "id": 1,
+    "name": "Bravhilde Briseflamme",
+    "class": "Guerrière Humaine",
+    "picture": "bravhilde-briseflamme.png",
+    "health": 180,
+    "healthMax": 180,
+    "mana": 0,
+    "manaMax": 0,
+    "damage": 18,
+    "defense": 30,
+    "fortune": 75,
+    "spell": null
+  },
+  {
+    "id": 2,
+    "name": "Archibald Fumebarbe",
+    "class": "Magicien Humain",
+    "picture": "archibald-fumebarbe.png",
+    "health": 100,
+    "healthMax": 100,
+    "mana": 200,
+    "manaMax": 200,
+    "damage": 8,
+    "defense": 8,
+    "fortune": 200,
+    "spell": {
+      "name": "Boule de Feu",
+      "target": "enemy",
+      "effect": "damage",
+      "amount": 30,
+      "manaCost": 20
+    }
+  },
+  {
+    "id": 3,
+    "name": "Lunéria Pluie-d’Argent",
+    "class": "Rôdeuse Elfe",
+    "picture": "luneria-pluie-dargent.png",
+    "health": 140,
+    "healthMax": 140,
+    "mana": 100,
+    "manaMax": 100,
+    "damage": 16,
+    "defense": 18,
+    "fortune": 150,
+    "spell": {
+      "name": "Flèche foudroyante",
+      "target": "enemy",
+      "effect": "damage",
+      "amount": 25,
+      "manaCost": 15
+    }
+  },
+  {
+    "id": 4,
+    "name": "Snargle Fignetteur",
+    "class": "Voleur Gnome",
+    "picture": "snargle-fignetteur.png",
+    "health": 160,
+    "healthMax": 160,
+    "mana": 80,
+    "manaMax": 80,
+    "damage": 14,
+    "defense": 20,
+    "fortune": 250,
+    "spell": {
+      "name": "Poison vicieux",
+      "target": "enemy",
+      "effect": "damage",
+      "amount": 15,
+      "manaCost": 10
+    }
+  }
+]

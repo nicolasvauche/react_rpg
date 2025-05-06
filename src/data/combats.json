@@ -1,0 +1,18 @@
+[
+  {
+    "questId": 1,
+    "enemies": [{ "name": "Rat Géant", "quantity": 3 }]
+  },
+  {
+    "questId": 2,
+    "enemies": [{ "name": "Gobelin lourd", "quantity": 3 }]
+  },
+  {
+    "questId": 3,
+    "enemies": [{ "name": "Minotaure", "quantity": 1 }]
+  },
+  {
+    "questId": 4,
+    "enemies": [{ "name": "Dragon Vert", "quantity": 1 }]
+  }
+]

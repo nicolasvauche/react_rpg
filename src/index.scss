@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=MedievalSharp&family=Cinzel:wght@400;700&display=swap");
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ffd700;
+  border-radius: 0.25rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ffd700;
+  border-radius: 0.25rem;
+}
+
+body {
+  margin: 0;
+  font-family: "MedievalSharp", cursive;
+  text-align: center;
+  color: #fff;
+  background-color: #000000;
+
+  #root {
+    padding: 1rem;
+    min-height: calc(100dvh - 2rem);
+  }
+
+  h1 {
+    margin: 0 0 1rem;
+    font-family: "Cinzel", serif;
+    font-size: 3.5rem;
+    color: rgb(255, 215, 0);
+    text-shadow:
+      0 0 10px #ff6b00,
+      0 0 20px #ff6b00,
+      0 0 30px #ff6b00;
+    animation: glow 2s ease-in-out infinite alternate;
+
+    @media (max-width: 767px) {
+      font-size: 2.5rem;
+    }
+  }
+
+  h2 {
+    color: #ffffff;
+    font-size: 2.5rem;
+    margin: 0 0 1rem;
+
+    @media (max-width: 767px) {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+  }
+}

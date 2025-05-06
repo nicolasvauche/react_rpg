@@ -1,0 +1,21 @@
+.character-inventory-layout {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+
+    @media (max-width: 767px) {
+        grid-template-columns: 1fr;
+    }
+
+    .right-panel {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+
+        @media (max-width: 767px) {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}

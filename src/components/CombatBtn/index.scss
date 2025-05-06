@@ -1,0 +1,25 @@
+.action-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: linear-gradient(145deg, #2a2a3a 0%, #1a1a2a 100%);
+    border: 2px solid #ffd700;
+    color: #ffd700;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.25rem;
+    font-family: "MedievalSharp", cursive;
+    border-radius: 10px;
+    text-decoration: none;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
+    transition: all 0.3s ease;
+
+    &:hover {
+        background: #1a1a1a;
+        transform: translateY(-3px) scale(1.03);
+        box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+    }
+
+    .icon {
+        font-size: 1.5rem;
+    }
+}
