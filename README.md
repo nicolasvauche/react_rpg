@@ -8,6 +8,11 @@
 
 Pour commencer votre aventure, ouvrez le projet dans votre navigateur en local après avoir installé les dépendances et lancé l’environnement de développement.
 
+```bash
+npm install
+npm run dev
+```
+
 ---
 
 ## 🧝‍♂️ Personnages jouables
@@ -28,7 +33,7 @@ Durant votre périple, vous rencontrerez plusieurs types de créatures, chacune 
 - **Rat Géant** – Faible, mais souvent en groupe.
 - **Gobelin Lourd** – Plus coriace, mais peu subtil.
 - **Minotaure** – Force brute, peu d’amis.
-- **Dragon Vert** – Bard à ses heures perdues, mais redoutable en combat.
+- **Dragon Vert** – Barde à ses heures perdues, mais redoutable en combat.
 
 Les ennemis ont été équilibrés pour infliger des dégâts significatifs, même aux plus défensifs.
 
@@ -46,7 +51,7 @@ Les ennemis ont été équilibrés pour infliger des dégâts significatifs, mê
 
 ## 🎒 Gestion de l’inventaire
 
-Vous avez accès à votre inventaire durant les combats pour utiliser vos objets, tels que des potions de soin ou des parchemins. Chaque objet peut avoir un effet immédiat ou être consommable.
+Vous avez accès à votre inventaire durant les combats pour utiliser vos objets, tels que des potions de soin ou de magie. Chaque objet a un effet immédiat.
 
 ---
 
@@ -67,8 +72,11 @@ Le jeu se compose d’une série de quêtes, chacune liée à un combat spécifi
 
 ## 🎯 Pistes d’amélioration
 
+- Développement d'une API pour stocker les données du jeu
+- Jeu multi-utilisateurs, voire multi-joueurs
 - Ajout de butin aléatoire après les combats.
 - Mise en place d’effets temporaires (bonus, malus).
+- Système de combat interactif.
 - Système de dialogue interactif.
 - Rééquilibrage dynamique de la difficulté.
 - Bonus de fin alternatifs (objets rares, réputation, options de rejouabilité).
