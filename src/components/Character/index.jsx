@@ -25,7 +25,7 @@ const StatBar = ({ current, max = 100, color }) => {
 };
 
 const Character = ({ character, showStatBar = true, combatMode = false }) => {
-  if (!character) return null;
+  if (!character) return null;  
 
   return (
     <div className="character-card">
@@ -46,7 +46,7 @@ const Character = ({ character, showStatBar = true, combatMode = false }) => {
               color="#e74c3c"
             />
           ) : (
-            <span>{character.health}</span>
+            <span>{character.healthMax}</span>
           )}
         </div>
 
@@ -62,7 +62,7 @@ const Character = ({ character, showStatBar = true, combatMode = false }) => {
               color="#3498db"
             />
           ) : (
-            <span>{character.mana}</span>
+            <span>{character.manaMax}</span>
           )}
         </div>
 
@@ -87,27 +87,30 @@ const Character = ({ character, showStatBar = true, combatMode = false }) => {
               <span className="icon">
                 <GiTwoCoins color="#f1c40f" />
               </span>
-              <span>{character.fortune}</span>
+              <span>{character.fortuneBase}</span>
             </div>
           </>
         )}
       </div>
 
-      {character.spell && (
-        <div className="character-spell">
+      {character.spells && character.spells.length > 0 && (
+        <div className="character-spells">
           <h5>
-            <GiSpellBook color="#9b59b6" />
-            <span>{character.spell.name}</span>
+            <GiSpellBook color="#9b59b6" /> Sorts connus :
           </h5>
-          <p className="mana">
-            <GiMagicSwirl color="#3498db" />
-            <span>{character.spell.manaCost}</span>
-          </p>
-          <p>
-            {character.spell.effect === "heal"
-              ? `Soigne ${character.spell.amount} PV`
-              : `Inflige ${character.spell.amount} dégâts`}
-          </p>
+          {character.spells.map((spell, index) => (
+            <div className="character-spell" key={index}>
+              <p className="spell-name">{spell.name}</p>
+              <p className="mana">
+                <GiMagicSwirl color="#3498db" /> {spell.mana_cost} mana
+              </p>
+              <p>
+                {spell.effect === "heal"
+                  ? `Soigne ${spell.amount} PV`
+                  : `Inflige ${spell.amount} dégâts`}
+              </p>
+            </div>
+          ))}
         </div>
       )}
     </div>

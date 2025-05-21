@@ -1,12 +1,13 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router";
+import npcs from "../../data/npcs.json";
 import "./index.scss";
 
 const EndPage = () => {
   const navigate = useNavigate();
+  const gronnella = npcs.find((npc) => npc.name.includes("Gronnella"));
 
   useEffect(() => {
-    // 🧹 Tu as sauvé la princesse. Il est temps de tirer sa révérence...
     localStorage.clear();
   }, []);
 
@@ -20,6 +21,14 @@ const EndPage = () => {
       <h2>🏰 Fin de l'Aventure 🏰</h2>
 
       <div className="end">
+        {gronnella && (
+          <img
+            src={`/img/${gronnella.picture}`}
+            alt={gronnella.name}
+            className="gronnella-img"
+          />
+        )}
+
         <p>
           Vous avez vaincu les rats, les gobelins, le minotaure et même le
           dragon ! La princesse Gronnella est propre et elle s'est changée,

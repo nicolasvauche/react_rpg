@@ -1,13 +1,14 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 import CharacterBtn from "../../components/CharacterBtn";
-import characters from "../../data/characters.json";
+/* import characters from "../../data/characters.json"; */
 import "./index.scss";
 
 const HomePage = () => {
   const navigate = useNavigate();
   const [isLoading, setIsLoading] = useState(true);
   const [character, setCharacter] = useState(null);
+  const [characters, setCharacters] = useState([]);
 
   useEffect(() => {
     const storedCharacter = localStorage.getItem("character");
@@ -15,6 +16,20 @@ const HomePage = () => {
     if (storedCharacter) {
       navigate("/jeu");
     } else {
+      const fetchCharacters = async () => {
+        try {
+          const response = await fetch("http://localhost:3000/api/characters");
+          if (!response.ok) {
+            throw new Error("Network response was not ok");
+          }
+          const data = await response.json();
+          setCharacters(data);
+        } catch (error) {
+          console.error("Error fetching characters:", error);
+        }
+      };
+
+      fetchCharacters();
       setIsLoading(false);
     }
   }, [navigate]);

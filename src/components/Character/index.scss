@@ -117,7 +117,7 @@
     }
   }
 
-  .character-spell {
+  .character-spells {
     margin-top: 1rem;
     padding: 0.75rem 1rem;
     background: rgba(0, 0, 0, 0.3);
@@ -140,6 +140,10 @@
     p {
       margin: 0.25rem 0;
       font-size: 1rem;
+
+      &.spell-name{
+        font-weight: bold;
+      }
 
       &.mana {
         display: grid;
